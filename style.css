@@ -1,14 +1,14 @@
 body{      
 /*margin-left: 100px;*/
     background-color: #f5f8fc;  /* 淡蓝灰背景 */
-    color: #1a1a1a;            /* 正文深灰色，阅读舒适 */
+    color: #1a1a1a;             /* 正文深灰色，阅读舒适 */
     font-family: "Arial", sans-serif;
 
 }
 
 
 .container {
-    max-width: 1200px;   /* container won’t exceed 1200px */
+    max-width: 1200px;    /* container won’t exceed 1200px */
     width: 90%;           /* shrinks with browser width */
     margin: 0 auto;       /* center horizontally */
 }
@@ -40,14 +40,14 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* 子元素靠右对齐 */
-    width: 100%;               /* 占满导航栏宽度 */
-    padding-bottom: 5px;         /* 分割线上方留白 */
+    justify-content: flex-start;   /* 子元素靠右对齐 */
+    width: 100%;                   /* 占满导航栏宽度 */
+    padding-bottom: 5px;           /* 分割线上方留白 */
     border-bottom: 2px solid #ccc; /* 分割线 */
 }
 
 .topnav ul li {
-    margin-right: 20px; /* 各条目之间的间距 */
+    margin-right: 20px;            /* 各条目之间的间距 */
 }
 
 .topnav ul li a {
@@ -114,7 +114,7 @@ h1.pagetitle{
   justify-content: flex-start; /* 左端对齐 */
   align-items: baseline;
   gap: 0.6em;
-  white-space: nowrap;     /* 禁止换行 */
+  white-space: nowrap;         /* 禁止换行 */
   margin: 0;
   line-height: 1.2;
 
@@ -185,14 +185,14 @@ ul.hlist li {
 }
 .paperlist .title {
     display: block;       /* 独占一行 */
-    color: black;  /* 和 H1 相同的大标题色 */
+    color: black;         /* 和 H1 相同的大标题色 */
     font-weight: bold;
     margin-bottom: 0.2em;
   }
   .paperlist .authors {
     font-weight: normal;    /* 括号内作者不加粗 */
-    color: black;         /* 继承题目的颜色，也可以单独设置颜色 */
-    font-size: 0.95em;    /* 可选：稍微小一点 */
+    color: black;           /* 继承题目的颜色，也可以单独设置颜色 */
+    font-size: 0.95em;      /* 可选：稍微小一点 */
     margin-bottom: 0.2em;  
 }
   .paperlist .meta {

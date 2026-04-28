@@ -152,14 +152,14 @@ h1 {
 h2 {
     font-family: 'Libre Baskerville', serif;
     font-size: 30px;
-    color: #1a5276;  /* 温和钢蓝 */     /* #1d6fa5;--> */ /* 中蓝色 */
+    color: #1a5276;  /* 温和钢蓝 */     /* #1d6fa5; */ /* 中蓝色 */
     font-weight: bold;
   }
 
-  h3 {
+h3 {
     font-family: 'Libre Baskerville', serif;
     font-size: 25px;
-    color: #1d6fa5;  /* 中蓝色 */
+    color: #004499   /* 原学术蓝 */     /*#1d6fa5;  */ /* 中蓝色 */
     font-weight: bold;
   }
 

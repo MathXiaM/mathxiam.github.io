@@ -1,108 +1,73 @@
 <!DOCTYPE html>
-<!-- HTML5 标准文档声明，所有静态学术主页通用 -->
 <html lang="en">
 <head>
-    <!-- 统一字符编码，防止中英文乱码 -->
-    <meta charset="UTF-8">
-    <!-- 适配手机/电脑，自适应显示 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 浏览器标签页标题，和原版一致：用英文名 -->
-    <title>Your Full Name</title>
-
-    <!-- ============= 全局样式：完全复刻目标网站风格 ============= -->
-    <style type="text/css">
-        /* 整体页面全局设置 */
+    <meta charset="utf-8">
+    <!-- 浏览器标签标题 -->
+    <title>Mingyang XIA</title>
+    <style>
+        /* 全局样式 */
         body {
-            /* 原版同款衬线字体：数学/学术经典字体 */
-            font-family: Georgia, "Times New Roman", Times, serif;
-            /* 页面整体居中，限制宽度，避免过宽，和原版一致 */
-            max-width: 750px;
-            margin: 60px auto;
-            /* 左右内边距，小屏幕不贴边 */
-            padding: 0 25px;
-            /* 纯黑正文，极简学术风 */
-            color: #000000;
-            /* 行间距宽松，阅读舒适，复刻原版疏密 */
-            line-height: 1.65;
-            /* 基础正文字号 */
+            max-width: 700px;     /* 页面宽度 */
+            margin: 4em auto;     /* 上下居中、留白一致 */
+            padding: 0 1em;
+            font-family: serif;   /* 衬线学术字体 */
             font-size: 16px;
+            color: #000;          /* 纯黑色文字 */
         }
 
-        /* ========== 1. 顶部大姓名（最高层级，页面主标题） ========== */
-        .name-title {
-            /* 姓名字号最大，视觉第一层级 */
-            font-size: 30px;
-            /* 不加粗，原版极简素雅风格 */
-            font-weight: normal;
-            /* 姓名下方留白，分割个人信息 */
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
+        /* 顶部大名字 一级标题 */
+        .myname {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
-        /* ========== 2. 板块小标题：Research / Biography 等（第二层级） ========== */
-        .section-title {
-            font-size: 19px;
-            font-weight: 600;
-            /* 板块上方大留白，分区清晰，和原版一致 */
-            margin-top: 32px;
-            margin-bottom: 8px;
+        /* 板块小标题 二级标题（加粗） */
+        h3 {
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 28px;
+            margin-bottom: 6px;
         }
 
-        /* 普通正文段落：单位、邮箱、经历、列表文字 */
+        /* 普通段落行距 */
         p {
-            margin: 6px 0;
+            margin: 4px 0;
+            line-height: 1.55;
         }
 
-        /* 超链接样式：论文/跳转链接，完全复刻原版蓝色 */
+        /* ========== 专属超链接设置 ========== */
         a {
-            color: #004499;
-            /* 默认无下划线，干净简约 */
-            text-decoration: none;
+            color: #0000EE;       /* 标准蓝色 */
+            text-decoration: none;/* 默认无下划线 */
         }
-
-        /* 鼠标悬浮链接：出现下划线，原版交互逻辑 */
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;/* 鼠标放上去也不下划线，保持极简 */
         }
     </style>
 </head>
 
 <body>
-    <!-- 【第一层级：个人全名】 完全对标网站最顶部大名字 -->
-    <div class="name-title">夏明洋 Mingyang XIA</div>
+    <!-- 首页大名字 -->
+    <div class="myname">Mingyang XIA 夏明洋</div>
 
-    <!-- 基础个人信息：单位、职位、邮箱、办公地址 -->
     <p>Assistant Professor, Dalian University of Technology</p>
-    <p>Email: xiamingyang<span style="display:none;">hide</span>@dlut.edu</p>
     <p>Office: Math Building-204</p>
+    <p>Email: xiamingyang AT dlut DOT edu DOT cn</p>
 
+    <!-- 板块1 -->
+    <h3>Research interests</h3>
+    <p>Differentiable Dynamical System.</p>
 
-    <!-- 【第二层级：板块标题 1】研究方向 -->
-    <div class="section-title">Research interests</div>
-    <p>Differentiable Dynamical System</p>
+    <p>
+        <a href="publications.html">Publications</a> &nbsp;
+        <a href="teaching.html">Teaching</a>
+    </p>
 
-
-    <!-- 【第二层级：板块标题 2】个人经历 -->
-    <div class="section-title">Biography</div>
-    <p>Ph.D., XX University, 20XX.</p>
-    <p>Postdoctoral researcher, XX Institute, 20XX–20XX.</p>
-    <p>Current position since 20XX.</p>
-
-
-    <!-- 【第二层级：板块标题 3】预印本 -->
-    <div class="section-title">Preprints</div>
-    <p>1. Paper Title, arXiv:xxxx.xxxxx, 2025. <a href="#">[arXiv]</a></p>
-
-
-    <!-- 【第二层级：板块标题 4】发表论文 -->
-    <div class="section-title">Publications</div>
-    <p>1. First author paper, Journal Name, 2026. <a href="#">[link]</a></p>
-    <p>2. Co-authored paper, Journal Name, 2024.</p>
-
-
-    <!-- 【第二层级：板块标题 5】教学工作 -->
-    <div class="section-title">Teaching</div>
-    <p>Calculus, Differential Equations, Dynamical Systems.</p>
+    <!-- 板块2 -->
+    <h3>Biography</h3>
+    <p>Ph.D., Peking University, 2022.</p>
+    <p>Postdoctoral researcher, SUSTech, 2022–2024.</p>
+    <p>Current position since 2024.</p>
 
 </body>
 </html>

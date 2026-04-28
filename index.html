@@ -1,84 +1,108 @@
-<!-- 1. 文档声明：告诉浏览器这是HTML5标准网页，必须写在第一行 -->
 <!DOCTYPE html>
-
-<!-- 2. 网页根标签：所有代码都要写在这对标签里 -->
-<html>
-
-<!-- 3. 网页头部：配置网页的基础信息（用户看不见） -->
+<!-- HTML5 标准文档声明，所有静态学术主页通用 -->
+<html lang="en">
 <head>
-    <!-- 编码格式：UTF-8，防止中文乱码（姓名、单位中文正常显示） -->
-    <meta charset="utf-8">
-    <!-- 浏览器标签页标题：打开网页时，浏览器顶部显示的文字 -->
-    <title>Your Name</title>
+    <!-- 统一字符编码，防止中英文乱码 -->
+    <meta charset="UTF-8">
+    <!-- 适配手机/电脑，自适应显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 浏览器标签页标题，和原版一致：用英文名 -->
+    <title>Your Full Name</title>
 
-    <!-- 4. 样式代码：控制网页的字体、颜色、排版（学术极简风核心） -->
-    <style>
-        /* 整体页面样式：所有内容的通用规则 */
+    <!-- ============= 全局样式：完全复刻目标网站风格 ============= -->
+    <style type="text/css">
+        /* 整体页面全局设置 */
         body {
-            max-width: 820px;       /* 网页最大宽度，避免太宽不好读 */
-            margin: 50px auto;      /* 上下留白50px，页面居中显示 */
-            padding: 0 30px;        /* 左右留白，手机上不会贴边 */
-            font-family: "Times New Roman", serif;  /* 学术专用字体，正式美观 */
-            font-size: 17px;        /* 正文文字大小，阅读舒适 */
-            color: #222;            /* 文字颜色：深灰色（护眼、专业） */
-            line-height: 1.7;       /* 行间距，文字不拥挤 */
+            /* 原版同款衬线字体：数学/学术经典字体 */
+            font-family: Georgia, "Times New Roman", Times, serif;
+            /* 页面整体居中，限制宽度，避免过宽，和原版一致 */
+            max-width: 750px;
+            margin: 60px auto;
+            /* 左右内边距，小屏幕不贴边 */
+            padding: 0 25px;
+            /* 纯黑正文，极简学术风 */
+            color: #000000;
+            /* 行间距宽松，阅读舒适，复刻原版疏密 */
+            line-height: 1.65;
+            /* 基础正文字号 */
+            font-size: 16px;
         }
-        /* 一级标题样式：你的姓名 */
-        h1 {
-            font-size: 28px;        /* 姓名文字大小 */
-            font-weight: normal;    /* 不加粗，简约学术风 */
-            margin-bottom: 10px;    /* 姓名下方留白 */
+
+        /* ========== 1. 顶部大姓名（最高层级，页面主标题） ========== */
+        .name-title {
+            /* 姓名字号最大，视觉第一层级 */
+            font-size: 30px;
+            /* 不加粗，原版极简素雅风格 */
+            font-weight: normal;
+            /* 姓名下方留白，分割个人信息 */
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
-        /* 二级标题样式：研究方向、论文、教学等小标题 */
-        h2 {
-            font-size: 20px;        /* 小标题文字大小 */
-            font-weight: normal;    /* 不加粗 */
-            margin-top: 35px;       /* 小标题上方留白，分区清晰 */
-            border-bottom: 1px solid #ddd;  /* 小标题下方加横线，分隔模块 */
-            padding-bottom: 5px;    /* 横线和文字的距离 */
+
+        /* ========== 2. 板块小标题：Research / Biography 等（第二层级） ========== */
+        .section-title {
+            font-size: 19px;
+            font-weight: 600;
+            /* 板块上方大留白，分区清晰，和原版一致 */
+            margin-top: 32px;
+            margin-bottom: 8px;
         }
-        /* 链接样式：CV、论文等可点击的文字 */
+
+        /* 普通正文段落：单位、邮箱、经历、列表文字 */
+        p {
+            margin: 6px 0;
+        }
+
+        /* 超链接样式：论文/跳转链接，完全复刻原版蓝色 */
         a {
-            color: #0055aa;         /* 链接颜色：深蓝色（学术标准色） */
-            text-decoration: none;  /* 去掉链接默认的下划线 */
+            color: #004499;
+            /* 默认无下划线，干净简约 */
+            text-decoration: none;
         }
-        /* 鼠标悬停链接时的样式 */
+
+        /* 鼠标悬浮链接：出现下划线，原版交互逻辑 */
         a:hover {
-            text-decoration: underline;  /* 鼠标放上去显示下划线 */
+            text-decoration: underline;
         }
     </style>
 </head>
 
-<!-- 5. 网页主体：用户能看到的所有内容（你的学术信息） -->
 <body>
-    <!-- 一级标题：你的姓名（中英文都可以） -->
-    <h1>夏明洋 Mingyang XIA</h1>
-    <!-- 普通段落：职位 + 单位 -->
+    <!-- 【第一层级：个人全名】 完全对标网站最顶部大名字 -->
+    <div class="name-title">夏明洋 Mingyang XIA</div>
+
+    <!-- 基础个人信息：单位、职位、邮箱、办公地址 -->
     <p>Assistant Professor, Dalian University of Technology</p>
-    <!-- 普通段落：邮箱 -->
-    <p>Office: Math-204</p>
-    <p>Email: xiamingyang AT dlut DOT edu DOT cn</p>
+    <p>Email: xiamingyang<span style="display:none;">hide</span>@dlut.edu</p>
+    <p>Office: Math Building-204</p>
 
-    <!-- 二级标题：研究方向 -->
-    <h2>Research Interests</h2>
-    <!-- 普通段落：填写你的研究领域 -->
-    <p>Differentiable Dynamical Systems</p>
 
-    <!-- 二级标题：论文成果 -->
-    <h2>Publications</h2>
-    <!-- 普通段落：填写你的论文、著作列表 -->
-    <p>论文列表、著作</p>
+    <!-- 【第二层级：板块标题 1】研究方向 -->
+    <div class="section-title">Research interests</div>
+    <p>Differentiable Dynamical System</p>
 
-    <!-- 二级标题：教学工作 -->
-    <h2>Teaching</h2>
-    <!-- 普通段落：填写你教授的课程 -->
-    <p>授课课程</p>
 
-    <!-- 二级标题：个人简历 -->
-    <h2>CV</h2>
-    <!-- 链接：点击跳转到简历PDF（后期上传PDF后修改文件名即可） -->
-    <p><a href="cv.pdf">Curriculum Vitae</a></p>
+    <!-- 【第二层级：板块标题 2】个人经历 -->
+    <div class="section-title">Biography</div>
+    <p>Ph.D., XX University, 20XX.</p>
+    <p>Postdoctoral researcher, XX Institute, 20XX–20XX.</p>
+    <p>Current position since 20XX.</p>
+
+
+    <!-- 【第二层级：板块标题 3】预印本 -->
+    <div class="section-title">Preprints</div>
+    <p>1. Paper Title, arXiv:xxxx.xxxxx, 2025. <a href="#">[arXiv]</a></p>
+
+
+    <!-- 【第二层级：板块标题 4】发表论文 -->
+    <div class="section-title">Publications</div>
+    <p>1. First author paper, Journal Name, 2026. <a href="#">[link]</a></p>
+    <p>2. Co-authored paper, Journal Name, 2024.</p>
+
+
+    <!-- 【第二层级：板块标题 5】教学工作 -->
+    <div class="section-title">Teaching</div>
+    <p>Calculus, Differential Equations, Dynamical Systems.</p>
+
 </body>
-
-<!-- 网页结束标签 -->
 </html>

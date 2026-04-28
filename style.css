@@ -1,0 +1,249 @@
+body{      
+/*margin-left: 100px;*/
+    background-color: #f5f8fc;  /* 淡蓝灰背景 */
+    color: #1a1a1a;            /* 正文深灰色，阅读舒适 */
+    font-family: "Arial", sans-serif;
+
+}
+
+
+.container {
+    max-width: 1200px;   /* container won’t exceed 1200px */
+    width: 90%;           /* shrinks with browser width */
+    margin: 0 auto;       /* center horizontally */
+}
+/* 默认宽屏时，两端对齐正文 */
+.container p,
+.container li {
+    text-align: justify;
+}
+
+/* 浏览器宽度不足时，改为左对齐 */
+@media (max-width: 1199px) {
+    .container p,
+    .container li {
+        text-align: left;
+    }
+}
+
+.separator {
+    border: none;            /* remove default border */
+    height: 2px;             /* thickness of the line */
+    background-color: #333;  /* line color */
+    width: 100%;             /* full width of body */
+    margin: 20px 0;          /* optional vertical spacing */
+}
+
+/* Top navigation bar */
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* 子元素靠右对齐 */
+    width: 100%;               /* 占满导航栏宽度 */
+    padding-bottom: 5px;         /* 分割线上方留白 */
+    border-bottom: 2px solid #ccc; /* 分割线 */
+}
+
+.topnav ul li {
+    margin-right: 20px; /* 各条目之间的间距 */
+}
+
+.topnav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: normal;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+/*.topnav ul li a:hover {
+    color: black;
+}*/
+
+a {
+    color: black;  /* 改成你想要的颜色 */
+    font-style: normal;
+    /*text-decoration: none;  removes underline */
+}
+a:hover {
+    color: blue; /* color on hover */
+}
+section p {
+    line-height: 1.5; /* 2倍行高，也可以用 1.5em 或 px */
+}
+
+/* 中文字体（只用于汉字） */
+@font-face {
+    font-family: 'YourChineseFont';
+    src: url('fonts/ShanHaiJiGuSongKe-JianFan/ShanHaiJiGuSongKe-JianFan-2.woff2') format('woff2'),
+    url('fonts/ShanHaiJiGuSongKe-JianFan/ShanHaiJiGuSongKe-JianFan-2.woff') format('woff');
+    unicode-range: U+4E00-9FFF; /* 中文常用字符范围 */
+}
+
+/* 英文字体：Libre Baskerville Regular */
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 英文字体：Bold */
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/LibreBaskerville-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 英文字体：Italic */
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/LibreBaskerville-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* 默认正文字体，英文用Libre Baskerville，中文用YourChineseFont */
+
+
+h1.pagetitle{
+     display: flex;
+  justify-content: flex-start; /* 左端对齐 */
+  align-items: baseline;
+  gap: 0.6em;
+  white-space: nowrap;     /* 禁止换行 */
+  margin: 0;
+  line-height: 1.2;
+
+  /* 随视口宽度缩放字号：最小16px，理想6vw，最大40px */
+  font-size: clamp(16px, 6vw, 40px);
+    
+    margin-top: 50px;    
+    /* margin-left: 20px; */
+    color: navy;
+}
+@media (max-width: 360px) {
+  .pagetitle {
+    font-size: clamp(14px, 5.2vw, 32px);
+    gap: 0.4em;
+  }
+}
+.header{
+    min-height: 100vh;
+    width: 100%; 
+  /*   background-image: linear-gradient(rgba(207, 56, 82, 0.7));*/
+    background-position: center;
+    background-size: cover;
+    position:relative;
+ }
+
+ h1,h2,h3{
+    font-family: 'Libre Baskerville', 'YourChineseFont', serif;
+ }
+h1 {
+    font-size: 40px;
+    color: #0d3b66;  /* 深藏青色 */
+    font-weight: bold;
+  }
+  
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30px;
+    color: #1d6fa5;  /* 中蓝色 */
+    font-weight: bold;
+  }
+
+  h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    color: #1d6fa5;  /* 中蓝色 */
+    font-weight: bold;
+  }
+
+p{
+    font-size: 20px;
+    text-align: justify;
+    text-align-last: left;
+  }
+ul.hlist {
+    list-style-type: none; /* remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+ul.hlist li {
+    font-size: 20px;
+    display: inline; /* inline elements */
+    margin-right: 20px; /* spacing */
+}
+
+.paperlist{
+    font-size: 20px;
+}
+.paperlist .title {
+    display: block;       /* 独占一行 */
+    color: black;  /* 和 H1 相同的大标题色 */
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+  .paperlist .authors {
+    font-weight: normal;    /* 括号内作者不加粗 */
+    color: black;         /* 继承题目的颜色，也可以单独设置颜色 */
+    font-size: 0.95em;    /* 可选：稍微小一点 */
+    margin-bottom: 0.2em;  
+}
+  .paperlist .meta {
+    display: block;       /* 出版信息整体一行 */
+    color: #333;          /* 可选：正文颜色 */
+    font-size: 0.95em;    /* 可选：稍微小一点 */
+     margin-top: 0;
+  }
+  .paperlist li {
+    margin-top: 1em !important;  /* 每条论文底部间距，可调整数值 */
+} 
+ .paperlist ol li{
+    margin: 0 0 5px 0;
+ }
+ .paperlist ol li a{
+    font-style: normal;
+ }
+#intro{
+    margin-left: 20px;
+}
+nav{
+     display: flex;
+     /* flex-direction: column*/; 
+     /* padding: 2% 6%; */
+     justify-content: space-between;
+     align-items:center;
+ }
+.nav-links{
+    font-size: 20px;
+}
+
+#profilepic{
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    float: left;
+    margin: 0 15px 15px 0;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 700px) {
+    #profilepic 
+    {display:none;}
+   }
+
+.back{
+    font-size:x-large
+}
+
+.coursename {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: black;
+}
